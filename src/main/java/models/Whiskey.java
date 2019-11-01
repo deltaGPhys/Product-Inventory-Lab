@@ -9,6 +9,18 @@ public class Whiskey {
     private int qty;
     private float price;
 
+    public Whiskey() {
+    }
+
+    public Whiskey(int id, String name, String brand, float volume, int qty, float price) {
+        this.volume = volume;
+        this.brand = brand;
+        this.id = id;
+        this.name = name;
+        this.qty = qty;
+        this.price = price;
+    }
+
     public float getVolume() {
         return volume;
     }
