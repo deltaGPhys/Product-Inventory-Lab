@@ -23,8 +23,40 @@ public class Sneaker {
         this.price = price;
     }
 
+    public int getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    public String getSport() {
+        return this.sport;
+    }
+
+    public float getSize() {
+        return this.size;
+    }
+
+    public int getQty() {
+        return this.qty;
+    }
+
+    public float getPrice() {
+        return this.price;
+    }
+
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setBrand(String brand) {
@@ -47,35 +79,4 @@ public class Sneaker {
         this.price = price;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getSport() {
-        return sport;
-    }
-
-    public float getSize() {
-        return size;
-    }
-
-    public int getQty() {
-        return qty;
-    }
-
-    public float getPrice() {
-        return price;
-    }
 }

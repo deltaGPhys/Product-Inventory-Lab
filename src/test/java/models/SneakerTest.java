@@ -1,11 +1,12 @@
 package models;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParameters;
 
-class SneakerTest {
+public class SneakerTest {
 
     @Test
     public void setNameTest() {
@@ -17,7 +18,7 @@ class SneakerTest {
         testSneaker.setName(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getName());
+        Assert.assertEquals(expected, testSneaker.getName());
     }
 
     @Test
@@ -30,7 +31,7 @@ class SneakerTest {
         testSneaker.setId(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getId());
+        Assert.assertEquals(expected, testSneaker.getId());
     }
 
     @Test
@@ -43,7 +44,7 @@ class SneakerTest {
         testSneaker.setBrand(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getBrand());
+        Assert.assertEquals(expected, testSneaker.getBrand());
     }
 
     @Test
@@ -56,7 +57,7 @@ class SneakerTest {
         testSneaker.setSport(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getSport());
+        Assert.assertEquals(expected, testSneaker.getSport());
     }
 
     @Test
@@ -69,7 +70,7 @@ class SneakerTest {
         testSneaker.setQty(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getQty());
+        Assert.assertEquals(expected, testSneaker.getQty());
     }
 
     @Test
@@ -82,7 +83,7 @@ class SneakerTest {
         testSneaker.setSize(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getSize());
+        Assert.assertEquals(expected, testSneaker.getSize(), .01);
     }
 
     @Test
@@ -95,7 +96,7 @@ class SneakerTest {
         testSneaker.setPrice(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testSneaker.getPrice());
+        Assert.assertEquals(expected, testSneaker.getPrice(), .01);
     }
 
     @Test // (1)
@@ -115,12 +116,12 @@ class SneakerTest {
                 expectedSport, expectedSize, expectedQty,expectedPrice);
 
         // (4)
-        Assertions.assertEquals(expectedId, testSneaker.getId());
-        Assertions.assertEquals(expectedName, testSneaker.getName());
-        Assertions.assertEquals(expectedBrand, testSneaker.getBrand());
-        Assertions.assertEquals(expectedSport, testSneaker.getSport());
-        Assertions.assertEquals(expectedSize, testSneaker.getSize());
-        Assertions.assertEquals(expectedQty, testSneaker.getQty());
-        Assertions.assertEquals(expectedPrice, testSneaker.getPrice());
+        Assert.assertEquals(expectedId, testSneaker.getId());
+        Assert.assertEquals(expectedName, testSneaker.getName());
+        Assert.assertEquals(expectedBrand, testSneaker.getBrand());
+        Assert.assertEquals(expectedSport, testSneaker.getSport());
+        Assert.assertEquals(expectedSize, testSneaker.getSize(), .01);
+        Assert.assertEquals(expectedQty, testSneaker.getQty());
+        Assert.assertEquals(expectedPrice, testSneaker.getPrice(), .01);
     }
 }

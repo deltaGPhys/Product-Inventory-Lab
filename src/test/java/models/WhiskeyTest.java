@@ -1,11 +1,13 @@
 package models;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.junit.runners.parameterized.BlockJUnit4ClassRunnerWithParameters;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class WhiskeyTest {
+@RunWith(JUnit4.class)
+public class WhiskeyTest {
 
 
     @Test
@@ -18,7 +20,7 @@ class WhiskeyTest {
         testWhiskey.setName(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getName());
+        Assert.assertEquals(expected, testWhiskey.getName());
     }
 
     @Test
@@ -31,7 +33,7 @@ class WhiskeyTest {
         testWhiskey.setId(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getId());
+        Assert.assertEquals(expected, testWhiskey.getId());
     }
 
     @Test
@@ -44,7 +46,7 @@ class WhiskeyTest {
         testWhiskey.setBrand(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getBrand());
+        Assert.assertEquals(expected, testWhiskey.getBrand());
     }
 
     @Test
@@ -57,7 +59,7 @@ class WhiskeyTest {
         testWhiskey.setQty(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getQty());
+        Assert.assertEquals(expected, testWhiskey.getQty());
     }
 
     @Test
@@ -70,7 +72,7 @@ class WhiskeyTest {
         testWhiskey.setVolume(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getVolume());
+        Assert.assertEquals(expected, testWhiskey.getVolume(), .01);
     }
 
     @Test
@@ -83,7 +85,7 @@ class WhiskeyTest {
         testWhiskey.setPrice(expected);
 
         // then (3)
-        Assertions.assertEquals(expected, testWhiskey.getPrice());
+        Assert.assertEquals(expected, testWhiskey.getPrice(), .01);
     }
 
     @Test // (1)
@@ -102,12 +104,12 @@ class WhiskeyTest {
                  expectedVolume, expectedQty,expectedPrice);
 
         // (4)
-        Assertions.assertEquals(expectedId, testWhiskey.getId());
-        Assertions.assertEquals(expectedName, testWhiskey.getName());
-        Assertions.assertEquals(expectedBrand, testWhiskey.getBrand());
-        Assertions.assertEquals(expectedVolume, testWhiskey.getVolume());
-        Assertions.assertEquals(expectedQty, testWhiskey.getQty());
-        Assertions.assertEquals(expectedPrice, testWhiskey.getPrice());
+        Assert.assertEquals(expectedId, testWhiskey.getId());
+        Assert.assertEquals(expectedName, testWhiskey.getName());
+        Assert.assertEquals(expectedBrand, testWhiskey.getBrand());
+        Assert.assertEquals(expectedVolume, testWhiskey.getVolume(), .01);
+        Assert.assertEquals(expectedQty, testWhiskey.getQty());
+        Assert.assertEquals(expectedPrice, testWhiskey.getPrice(), .01);
     }
 
 }
