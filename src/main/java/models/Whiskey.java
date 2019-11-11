@@ -1,16 +1,18 @@
 package models;
 
-public class Whiskey {
+import java.lang.reflect.Field;
+import java.util.LinkedHashMap;
 
-    private float volume;
-    private String brand;
-    private int id;
-    private String name;
-    private int qty;
-    private float price;
+public class Whiskey extends SuperObject {
 
-    public Whiskey() {
-    }
+    protected int id;
+    protected String name;
+    protected String brand;
+    protected float volume;
+    protected int qty;
+    protected float price;
+
+    public Whiskey() {}
 
     public Whiskey(int id, String name, String brand, float volume, int qty, float price) {
         this.volume = volume;
@@ -19,6 +21,17 @@ public class Whiskey {
         this.name = name;
         this.qty = qty;
         this.price = price;
+    }
+
+//    public Whiskey(LinkedHashMap<Field,Object> inputs) throws IllegalAccessException {
+//
+//        for (Field field : this.getClass().getDeclaredFields()) {
+//            field.set(this,inputs.get(field));
+//        }
+//    }
+
+    public Whiskey(LinkedHashMap<Field,Object> inputs)  {
+        super(inputs);
     }
 
     public float getVolume() {
@@ -67,5 +80,9 @@ public class Whiskey {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String toString() {
+        return String.format("ID: %d, Name: %s, Brand: %s, Volume: %f, Quantity: %d, Price: $%.2f", this.id, this.name, this.brand, this.volume, this.qty, this.price);
     }
 }

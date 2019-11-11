@@ -12,25 +12,34 @@ public class WhiskeyService {
 
     public Whiskey create(String name, String brand, float volume, int quantity, float price) {
 
-        // (2)
         Whiskey createdWhiskey = new Whiskey(nextId++, name, brand, volume, quantity, price);
-
-        // (3)
         inventory.add(createdWhiskey);
 
-        // (4)
         return createdWhiskey;
+    }
+
+    public Whiskey create(Whiskey whiskey) {
+        for (int i=1; i<=this.inventory.size(); i++){
+            if (this.findWhiskey(i) == null) {
+                whiskey.setId(i);
+            }
+        }
+
+        if (whiskey.getId() == 0) {
+            whiskey.setId(nextId++);
+        }
+
+        inventory.add(whiskey);
+
+        return whiskey;
     }
 
     public Whiskey create() {
 
-        // (2)
         Whiskey createdWhiskey = new Whiskey(nextId++, "defaultName", "defaultBrand", 10.5f, 2, 12.99f);
 
-        // (3)
         inventory.add(createdWhiskey);
 
-        // (4)
         return createdWhiskey;
     }
 

@@ -22,15 +22,17 @@ public class SneakerService {
         return createdSneaker;
     }
 
+    public Sneaker create(Sneaker sneaker) {
+        inventory.add(sneaker);
+
+        return sneaker;
+    }
+
     public Sneaker create() {
 
-        // (2)
         Sneaker createdSneaker = new Sneaker(nextId++, "defaultName", "defaultBrand", "defaultSport", 10.5f, 2, 12.99f);
-
-        // (3)
         inventory.add(createdSneaker);
 
-        // (4)
         return createdSneaker;
     }
 

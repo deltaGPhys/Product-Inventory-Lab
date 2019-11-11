@@ -1,17 +1,21 @@
 package models;
 
-public class Sneaker {
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
 
-    private int id;
-    private String name;
-    private String brand;
-    private String sport;
-    private float size;
-    private int qty;
-    private float price;
+public class Sneaker extends SuperObject {
 
-    public Sneaker() {
-    }
+    protected int id;
+    protected String name;
+    protected String brand;
+    protected String sport;
+    protected float size;
+    protected int qty;
+    protected float price;
+
+    public Sneaker() {}
 
     public Sneaker(int id, String name, String brand, String sport, float size, int qty, float price) {
         this.id = id;
@@ -21,6 +25,17 @@ public class Sneaker {
         this.size = size;
         this.qty = qty;
         this.price = price;
+    }
+
+//    public Sneaker(LinkedHashMap<Field,Object> inputs) throws IllegalAccessException {
+//
+//        for (Field field : this.getClass().getDeclaredFields()) {
+//            field.set(this,inputs.get(field));
+//        }
+//    }
+
+    public Sneaker(LinkedHashMap<Field,Object> inputs) {
+        super(inputs);
     }
 
     public int getId() {
@@ -77,6 +92,10 @@ public class Sneaker {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public String toString() {
+        return String.format("ID: %d, Name: %s, Brand: %s, Sport: %s, Size: %f, Quantity: %d, Price: $%.2f", this.id, this.name, this.brand, this.sport, this.size, this.qty, this.price);
     }
 
 }
