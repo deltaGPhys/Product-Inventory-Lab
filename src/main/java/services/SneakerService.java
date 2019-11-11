@@ -12,17 +12,22 @@ public class SneakerService {
 
     public Sneaker create(String name, String brand, String sport, float size, int quantity, float price) {
 
-        // (2)
         Sneaker createdSneaker = new Sneaker(nextId++, name, brand, sport, size, quantity, price);
-
-        // (3)
         inventory.add(createdSneaker);
 
-        // (4)
         return createdSneaker;
     }
 
     public Sneaker create(Sneaker sneaker) {
+        for (int i=1; i<=this.inventory.size(); i++){
+            if (this.findSneaker(i) == null) {
+                sneaker.setId(i);
+            }
+        }
+
+        if (sneaker.getId() == 0) {
+            sneaker.setId(nextId++);
+        }
         inventory.add(sneaker);
 
         return sneaker;

@@ -139,7 +139,7 @@ public class App {
                     for (Sneaker sneaker : sneakerService.findAll()) {
                         Console.println(sneaker.toString());
                     }
-                    itemChoice = Console.getInteger();
+                    itemChoice = Console.getInteger(maxId);
                     Console.println(sneakerService.findSneaker(itemChoice).toString());
                     if (Console.getInput("Press Enter to delete, any other key to abort").equals("")) {
                         sneakerService.delete(itemChoice);
@@ -155,7 +155,7 @@ public class App {
                     for (Whiskey whiskey : whiskeyService.findAll()) {
                         Console.println(whiskey.toString());
                     }
-                    itemChoice = Console.getInteger();
+                    itemChoice = Console.getInteger(maxId);
                     Console.println(whiskeyService.findWhiskey(itemChoice).toString());
                     if (Console.getInput("Press Enter to delete, any other key to abort").equals("")) {
                         whiskeyService.delete(itemChoice);
@@ -185,7 +185,7 @@ public class App {
                     for (Sneaker sneaker : sneakerService.findAll()) {
                         Console.println(sneaker.toString());
                     }
-                    itemChoice = Console.getInteger();
+                    itemChoice = Console.getInteger(maxId);
                     Console.println(sneakerService.findSneaker(itemChoice).toString());
                     if (Console.getInput("Press Enter to update, any other key to abort").equals("")) {
                         sneakerService.delete(itemChoice);
@@ -203,7 +203,7 @@ public class App {
                     for (Whiskey whiskey : whiskeyService.findAll()) {
                         Console.println(whiskey.toString());
                     }
-                    itemChoice = Console.getInteger();
+                    itemChoice = Console.getInteger(maxId);
                     Console.println(whiskeyService.findWhiskey(itemChoice).toString());
                     if (Console.getInput("Press Enter to update, any other key to abort").equals("")) {
                         whiskeyService.delete(itemChoice);
