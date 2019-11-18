@@ -24,6 +24,7 @@ public class App {
         // application logic here
         // call methods to take user input and interface with services
         Console.printWelcome();
+
 //        Console.println("*********** Sneaker ************");
 //        LinkedHashMap<Field, Object> inputs = Console.getInputs(new Sneaker());
 //        Sneaker sneaker = new Sneaker(inputs);
