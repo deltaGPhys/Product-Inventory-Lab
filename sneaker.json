@@ -1,0 +1,33 @@
+[ {
+  "id" : 1,
+  "name" : "Swoosh",
+  "brand" : "NIke",
+  "sport" : "golf",
+  "size" : 3.5,
+  "qty" : 40,
+  "price" : 45.99
+}, {
+  "id" : 2,
+  "name" : "Oswego",
+  "brand" : "Adidas",
+  "sport" : "Running",
+  "size" : 13.0,
+  "qty" : 34,
+  "price" : 35.99
+}, {
+  "id" : 3,
+  "name" : "Jumper",
+  "brand" : "Jimpo",
+  "sport" : "Jorping",
+  "size" : 34.5,
+  "qty" : 23,
+  "price" : 99.99
+}, {
+  "id" : 4,
+  "name" : "Hopper",
+  "brand" : "Hippo",
+  "sport" : "Hope",
+  "size" : 21.2,
+  "qty" : 56,
+  "price" : 12.99
+} ]

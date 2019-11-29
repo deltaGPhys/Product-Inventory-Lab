@@ -1,0 +1,15 @@
+[ {
+  "id" : 1,
+  "name" : "Red Label",
+  "brand" : "Johnny Walker",
+  "volume" : 1.0,
+  "qty" : 34,
+  "price" : 45.99
+}, {
+  "id" : 2,
+  "name" : "Black Label",
+  "brand" : "Johnny Walker",
+  "volume" : 1.0,
+  "qty" : 54,
+  "price" : 46.99
+} ]
